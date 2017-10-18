@@ -141,6 +141,11 @@ describe('Arabic', () => {
       const wordExpected = ')pbuhswuhs';
       test.strictEqual(word, wordExpected, 'sut.toCal sandalone Ou');
     });
+    it('Mapping to empty', () => {
+      const word = sut.toCal('ّساثبْ');
+      const wordExpected = 's)t,b';
+      test.strictEqual(word, wordExpected, 'sut.toCal with empty');
+    });
     it('Blank word returns blank', () => {
       const word = sut.toCal('');
       const wordExpected = '';
